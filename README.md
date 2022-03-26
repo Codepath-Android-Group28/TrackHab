@@ -69,6 +69,7 @@
 
  - Home Screen  
    - => New Habit Screen  
+   - => Statistics Screen  
 
 - Login Screen  
    - => Home Screen  
