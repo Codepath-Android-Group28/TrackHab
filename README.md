@@ -41,21 +41,21 @@
 
 ### 2. Screen Archetypes
 
-*Home Screen  
-   *Show what habits you have to do today  
-   *Mark that a habit was completed for the day  
+-Home Screen  
+   -Show what habits you have to do today  
+   -Mark that a habit was completed for the day  
 
-*New Habit Screen  
-   *Create habit (has a name and schedule for e.g. complete every Wednesday)  
+-New Habit Screen  
+   -Create habit (has a name and schedule for e.g. complete every Wednesday)  
 
-*Register Screen  
-   *Register as a new User  
+-Register Screen  
+   -Register as a new User  
 
-*Login Screen  
-   *Login as an existing user  
+-Login Screen  
+   -Login as an existing user  
 
-*Statistics Screen  
-   *Show habit history/days complete  
+-Statistics Screen  
+   -Show habit history/days complete  
 
 ### 3. Navigation
 
@@ -67,21 +67,21 @@
 
 **Flow Navigation** (Screen to Screen)
 
-*Home Screen  
-   *=> New Habit Screen  
-   *=> Statistics Screen  
+-Home Screen  
+   -=> New Habit Screen  
+   -=> Statistics Screen  
 
-*Login Screen  
-   *=> Home Screen  
+-Login Screen  
+   -=> Home Screen  
 
-*Register Screen  
-   *=> Home Screen  
+-Register Screen  
+   -=> Home Screen  
 
-*New Habit Screen  
-   *=> Home Screen  
+-New Habit Screen  
+   -=> Home Screen  
 
-*Statistics Screen  
-   *=> Home Screen  
+-Statistics Screen  
+   -=> Home Screen  
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
