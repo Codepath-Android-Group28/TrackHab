@@ -41,7 +41,7 @@
 
 ### 2. Screen Archetypes
 
-- Home Screen  
+-  Home Screen  
    - Show what habits you have to do today  
    - Mark that a habit was completed for the day  
 
