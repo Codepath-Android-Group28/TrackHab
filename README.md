@@ -59,7 +59,7 @@
 
 ### 3. Navigation
 
-**Tab Navigation** (Tab to Screen) [Non so far]
+**Tab Navigation** (Tab to Screen) [None so far]
 
 * [fill out your first tab]
 * [fill out your second tab]
