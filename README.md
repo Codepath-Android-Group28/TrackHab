@@ -25,12 +25,12 @@
 
 **Required Must-have Stories**
 
-*Create habit (has a name and schedule for e.g. complete every Wednesday)  
-*Mark that a habit was completed for the day  
-*Show habit history/days complete  
-*Show what habits you have to do today  
-*Register as a new user  
-*Login as Existing User  
+- Create habit (has a name and schedule for e.g. complete every Wednesday)  
+- Mark that a habit was completed for the day  
+- Show habit history/days complete  
+- Show what habits you have to do today  
+- Register as a new user  
+- Login as Existing User  
 
 **Optional Nice-to-have Stories**
 
