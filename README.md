@@ -34,10 +34,10 @@
 
 **Optional Nice-to-have Stories**
 
-*Needs push reminders (for e.g. if daily, a reminder every day, if weekly, a reminder every week)  
-*Have a display of compliance (e.g. a calendar that shows every day you completed a task and every day you failed)  
-*Categories habits  
-*Encouraging messages and pictures of cute animals as rewards for long streaks :)  
+- Needs push reminders (for e.g. if daily, a reminder every day, if weekly, a reminder every week)  
+- Have a display of compliance (e.g. a calendar that shows every day you completed a task and every day you failed)  
+- Categories habits  
+- Encouraging messages and pictures of cute animals as rewards for long streaks :)  
 
 ### 2. Screen Archetypes
 
