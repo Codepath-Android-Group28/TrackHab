@@ -25,19 +25,19 @@
 
 **Required Must-have Stories**
 
-*Create habit (has a name and schedule for e.g. complete every Wednesday)
-*Mark that a habit was completed for the day
-*Show habit history/days complete
-*Show what habits you have to do today
-*Register as a new user
-*Login as Existing User
+*Create habit (has a name and schedule for e.g. complete every Wednesday)  
+*Mark that a habit was completed for the day  
+*Show habit history/days complete  
+*Show what habits you have to do today  
+*Register as a new user  
+*Login as Existing User  
 
 **Optional Nice-to-have Stories**
 
-*Needs push reminders (for e.g. if daily, a reminder every day, if weekly, a reminder every week)
-*Have a display of compliance (e.g. a calendar that shows every day you completed a task and every day you failed)
-*Categories habits
-*Encouraging messages and pictures of cute animals as rewards for long streaks :)
+*Needs push reminders (for e.g. if daily, a reminder every day, if weekly, a reminder every week)  
+*Have a display of compliance (e.g. a calendar that shows every day you completed a task and every day you failed)  
+*Categories habits  
+*Encouraging messages and pictures of cute animals as rewards for long streaks :)  
 
 ### 2. Screen Archetypes
 
