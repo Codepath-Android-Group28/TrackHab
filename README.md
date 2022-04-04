@@ -95,7 +95,8 @@
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models
-[Add table of models]
+<img src="https://i.imgur.com/01vQtYR.png" width=600>
+<img src="https://i.imgur.com/XUI8iqU.png" width=600>
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
