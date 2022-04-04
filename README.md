@@ -193,22 +193,22 @@
        ```
 - New Habit Screen
   (POST) Create a new habit
-             ```   
-         val habit =  Habit()   
-          habit.setHabitName(name)   
-          habit.setTarget(target)   
-          habit.frequency(frequency)   
-          habit.habitTerm(term)   
-          habit.saveInBackground { exception ->   
-              if (exception == null) {   
-                  Log.i(MainActivity.TAG, "Successfully saved habit")   
+  ```   
+  val habit =  Habit()   
+  habit.setHabitName(name)   
+  habit.setTarget(target)   
+  habit.frequency(frequency)   
+  habit.habitTerm(term)   
+  habit.saveInBackground { exception ->   
+    if (exception == null) {   
+      Log.i(MainActivity.TAG, "Successfully saved habit")   
       TODO: Reset fields…   
-              } else {   
-                  Log.e(MainActivity.TAG, "Error while saving habit")   
-                  exception.printStackTrace()   
-              }
-          }
-             ```   
+    } else {   
+       Log.e(MainActivity.TAG, "Error while saving habit")   
+       exception.printStackTrace()   
+      }
+   }
+   ```   
  
 - Statistic Screen
 ```
