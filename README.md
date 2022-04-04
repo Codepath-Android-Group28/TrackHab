@@ -117,7 +117,7 @@
      }
     ```
   - (Delete) Delete an existing habit 
-             ```    
+         ```    
          habit.deleteInBackground { exception ->   
               if (exception == null) {   
                   Log.i(MainActivity.TAG, "Successfully deleted habit")   
@@ -126,7 +126,7 @@
                   exception.printStackTrace()   
               }
           }   
-             ```   
+          ```   
   - (PUT) Edit an existing habit
        ```  
        habit.setHabitName(name)
