@@ -117,7 +117,8 @@
      }
     ```
   - (Delete) Delete an existing habit 
-         ``` habit.deleteInBackground { exception ->
+         ``` 
+         habit.deleteInBackground { exception ->
               if (exception == null) {
                   Log.i(MainActivity.TAG, "Successfully deleted habit")
               } else {
@@ -127,7 +128,8 @@
           }
          ```
   - (PUT) Edit an existing habit
-       ```  habit.setHabitName(name)
+       ```  
+       habit.setHabitName(name)
          habit.setTarget(target)
          habit.frequency(frequency)
          habit.habitTerm(term)
@@ -142,7 +144,8 @@
          }
        ```
    - (PUT) Mark habit as complete
-        ```habit.setCompleted(status)
+        ```
+        habit.setCompleted(status)
         habit.saveInBackground { exception ->
             if (exception == null) {
                 Log.i(MainActivity.TAG, "Successfully updated habit")
@@ -169,7 +172,8 @@
       ```
    - (POST) Create New User
       private fun signUpUser(username: String, password: String) {
-       ``` // Create the ParseUser
+       ``` 
+       // Create the ParseUser
               val user = ParseUser()
               // Set fields for the user to be created
               user.setUsername(username)
@@ -189,7 +193,8 @@
        ```
 - New Habit Screen
   (POST) Create a new habit
-         ```val habit =  Habit()
+         ```
+         val habit =  Habit()
           habit.setHabitName(name)
           habit.setTarget(target)
           habit.frequency(frequency)
