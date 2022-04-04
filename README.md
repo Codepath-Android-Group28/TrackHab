@@ -103,7 +103,7 @@
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
 - Home Screen
   - (GET) Query all habits where user is the creator
-     let query = PFQuery(className:"Habit")
+    ``` let query = PFQuery(className:"Habit")
      query.whereKey("userId", equalTo: currentUser)
      query.order(byDescending: "createdAt")
      query.findObjectsInBackground { (habits: [PFObject]?, error: Error?) in
@@ -113,18 +113,18 @@
            print("Successfully retrieved \(habits.count) habits.")
           // TODO: Do something with habits...
         }
-     }	
+     }	```
   - (Delete) Delete an existing habit 
-          habit.deleteInBackground { exception ->
+         ``` habit.deleteInBackground { exception ->
               if (exception == null) {
                   Log.i(MainActivity.TAG, "Successfully deleted habit")
               } else {
                   Log.e(MainActivity.TAG, "Error while deleting habit")
                   exception.printStackTrace()
               }
-          }
+          }```
   - (PUT) Edit an existing habit
-         habit.setHabitName(name)
+       ```  habit.setHabitName(name)
          habit.setTarget(target)
          habit.frequency(frequency)
          habit.habitTerm(term)
@@ -136,9 +136,9 @@
                  Log.e(MainActivity.TAG, "Error while saving habit")
                  exception.printStackTrace()
              }
-         }
+         }```
    - (PUT) Mark habit as complete
-        habit.setCompleted(status)
+        ```habit.setCompleted(status)
         habit.saveInBackground { exception ->
             if (exception == null) {
                 Log.i(MainActivity.TAG, "Successfully updated habit")
@@ -146,11 +146,11 @@
                 Log.e(MainActivity.TAG, "Error while updating habit")
                 exception.printStackTrace()
             }
-        }
+        }```
         
 - Login/Sign Up Screen
    - (GET) Query logged in user object
-      private fun loginUser(username: String, password: String) {
+      ```private fun loginUser(username: String, password: String) {
            ParseUser.logInInBackground(username, password, ({ user, e ->
                if (user != null) {
                    Log.i(TAG, "Successfully logged in user")
@@ -160,12 +160,11 @@
                    Toast.makeText(this, "Error logging in", Toast.LENGTH_SHORT).show()
                }})
            )
-       }	
+       }	```
    - (POST) Create New User
       private fun signUpUser(username: String, password: String) {
-              // Create the ParseUser
+             ``` // Create the ParseUser
               val user = ParseUser()
-
               // Set fields for the user to be created
               user.setUsername(username)
               user.setPassword(password)
@@ -180,10 +179,10 @@
                       Toast.makeText(this, "Error signing up", Toast.LENGTH_SHORT).show()
                   }
               }
-          }
+          }```
 - New Habit Screen
   (POST) Create a new habit
-         val habit =  Habit()
+         ```val habit =  Habit()
           habit.setHabitName(name)
           habit.setTarget(target)
           habit.frequency(frequency)
@@ -196,9 +195,10 @@
                   Log.e(MainActivity.TAG, "Error while saving habit")
                   exception.printStackTrace()
               }
-          }
+          }```
 
 - Statistic Screen
+```
    (GET) Query all habits of a user
    let query = PFQuery(className:"Habit")
    query.whereKey("userId", equalTo: currentUser)
@@ -211,4 +211,5 @@
         // TODO: Do something with habits...
       }
    }	
+```
 
