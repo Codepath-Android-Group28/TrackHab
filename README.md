@@ -86,7 +86,7 @@
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img src="https://i.imgur.com/95fKcAK.png" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
 
