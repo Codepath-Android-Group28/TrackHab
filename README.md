@@ -103,6 +103,7 @@
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
 - Home Screen
   - (GET) Query all habits where user is the creator
+
     ``` let query = PFQuery(className:"Habit")
      query.whereKey("userId", equalTo: currentUser)
      query.order(byDescending: "createdAt")
@@ -113,7 +114,8 @@
            print("Successfully retrieved \(habits.count) habits.")
           // TODO: Do something with habits...
         }
-     }	```
+     }
+    ```
   - (Delete) Delete an existing habit 
          ``` habit.deleteInBackground { exception ->
               if (exception == null) {
@@ -122,7 +124,8 @@
                   Log.e(MainActivity.TAG, "Error while deleting habit")
                   exception.printStackTrace()
               }
-          }```
+          }
+         ```
   - (PUT) Edit an existing habit
        ```  habit.setHabitName(name)
          habit.setTarget(target)
@@ -136,7 +139,8 @@
                  Log.e(MainActivity.TAG, "Error while saving habit")
                  exception.printStackTrace()
              }
-         }```
+         }
+       ```
    - (PUT) Mark habit as complete
         ```habit.setCompleted(status)
         habit.saveInBackground { exception ->
@@ -146,7 +150,8 @@
                 Log.e(MainActivity.TAG, "Error while updating habit")
                 exception.printStackTrace()
             }
-        }```
+        }
+        ```
         
 - Login/Sign Up Screen
    - (GET) Query logged in user object
@@ -160,10 +165,11 @@
                    Toast.makeText(this, "Error logging in", Toast.LENGTH_SHORT).show()
                }})
            )
-       }	```
+       }	
+      ```
    - (POST) Create New User
       private fun signUpUser(username: String, password: String) {
-             ``` // Create the ParseUser
+       ``` // Create the ParseUser
               val user = ParseUser()
               // Set fields for the user to be created
               user.setUsername(username)
@@ -179,7 +185,8 @@
                       Toast.makeText(this, "Error signing up", Toast.LENGTH_SHORT).show()
                   }
               }
-          }```
+          }
+       ```
 - New Habit Screen
   (POST) Create a new habit
          ```val habit =  Habit()
@@ -195,7 +202,8 @@
                   Log.e(MainActivity.TAG, "Error while saving habit")
                   exception.printStackTrace()
               }
-          }```
+          }
+        ```
 
 - Statistic Screen
 ```
