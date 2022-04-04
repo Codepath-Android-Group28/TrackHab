@@ -117,16 +117,16 @@
      }
     ```
   - (Delete) Delete an existing habit 
-         ``` 
-         habit.deleteInBackground { exception ->
-              if (exception == null) {
-                  Log.i(MainActivity.TAG, "Successfully deleted habit")
-              } else {
-                  Log.e(MainActivity.TAG, "Error while deleting habit")
-                  exception.printStackTrace()
+             ```    
+         habit.deleteInBackground { exception ->   
+              if (exception == null) {   
+                  Log.i(MainActivity.TAG, "Successfully deleted habit")   
+              } else {   
+                  Log.e(MainActivity.TAG, "Error while deleting habit")   
+                  exception.printStackTrace()   
               }
-          }
-         ```
+          }   
+             ```   
   - (PUT) Edit an existing habit
        ```  
        habit.setHabitName(name)
@@ -193,23 +193,23 @@
        ```
 - New Habit Screen
   (POST) Create a new habit
-         ```
-         val habit =  Habit()
-          habit.setHabitName(name)
-          habit.setTarget(target)
-          habit.frequency(frequency)
-          habit.habitTerm(term)
-          habit.saveInBackground { exception ->
-              if (exception == null) {
-                  Log.i(MainActivity.TAG, "Successfully saved habit")
-      TODO: Reset fields…
-              } else {
-                  Log.e(MainActivity.TAG, "Error while saving habit")
-                  exception.printStackTrace()
+             ```   
+         val habit =  Habit()   
+          habit.setHabitName(name)   
+          habit.setTarget(target)   
+          habit.frequency(frequency)   
+          habit.habitTerm(term)   
+          habit.saveInBackground { exception ->   
+              if (exception == null) {   
+                  Log.i(MainActivity.TAG, "Successfully saved habit")   
+      TODO: Reset fields…   
+              } else {   
+                  Log.e(MainActivity.TAG, "Error while saving habit")   
+                  exception.printStackTrace()   
               }
           }
-        ```
-
+             ```   
+ 
 - Statistic Screen
 ```
    (GET) Query all habits of a user
