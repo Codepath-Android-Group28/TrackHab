@@ -101,4 +101,114 @@
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+- Home Screen
+  - (GET) Query all habits where user is the creator
+     let query = PFQuery(className:"Habit")
+     query.whereKey("userId", equalTo: currentUser)
+     query.order(byDescending: "createdAt")
+     query.findObjectsInBackground { (habits: [PFObject]?, error: Error?) in
+        if let error = error { 
+           print(error.localizedDescription)
+        } else if let habits = habits {
+           print("Successfully retrieved \(habits.count) habits.")
+          // TODO: Do something with habits...
+        }
+     }	
+  - (Delete) Delete an existing habit 
+          habit.deleteInBackground { exception ->
+              if (exception == null) {
+                  Log.i(MainActivity.TAG, "Successfully deleted habit")
+              } else {
+                  Log.e(MainActivity.TAG, "Error while deleting habit")
+                  exception.printStackTrace()
+              }
+          }
+  - (PUT) Edit an existing habit
+         habit.setHabitName(name)
+         habit.setTarget(target)
+         habit.frequency(frequency)
+         habit.habitTerm(term)
+         habit.saveInBackground { exception ->
+             if (exception == null) {
+                 Log.i(MainActivity.TAG, "Successfully saved habit")
+     TODO: Reset fields…
+             } else {
+                 Log.e(MainActivity.TAG, "Error while saving habit")
+                 exception.printStackTrace()
+             }
+         }
+   - (PUT) Mark habit as complete
+        habit.setCompleted(status)
+        habit.saveInBackground { exception ->
+            if (exception == null) {
+                Log.i(MainActivity.TAG, "Successfully updated habit")
+            } else {
+                Log.e(MainActivity.TAG, "Error while updating habit")
+                exception.printStackTrace()
+            }
+        }
+        
+- Login/Sign Up Screen
+   - (GET) Query logged in user object
+      private fun loginUser(username: String, password: String) {
+           ParseUser.logInInBackground(username, password, ({ user, e ->
+               if (user != null) {
+                   Log.i(TAG, "Successfully logged in user")
+                   goToMainActivity()
+               } else {
+                   e.printStackTrace()
+                   Toast.makeText(this, "Error logging in", Toast.LENGTH_SHORT).show()
+               }})
+           )
+       }	
+   - (POST) Create New User
+      private fun signUpUser(username: String, password: String) {
+              // Create the ParseUser
+              val user = ParseUser()
+
+              // Set fields for the user to be created
+              user.setUsername(username)
+              user.setPassword(password)
+
+              user.signUpInBackground { e ->
+                  if (e == null) {
+                      // User has successfully created a new account
+                      goToMainActivity()
+                      Toast.makeText(this, "Successfully signed up", Toast.LENGTH_SHORT).show()
+                  } else {
+                      e.printStackTrace()
+                      Toast.makeText(this, "Error signing up", Toast.LENGTH_SHORT).show()
+                  }
+              }
+          }
+- New Habit Screen
+  (POST) Create a new habit
+         val habit =  Habit()
+          habit.setHabitName(name)
+          habit.setTarget(target)
+          habit.frequency(frequency)
+          habit.habitTerm(term)
+          habit.saveInBackground { exception ->
+              if (exception == null) {
+                  Log.i(MainActivity.TAG, "Successfully saved habit")
+      TODO: Reset fields…
+              } else {
+                  Log.e(MainActivity.TAG, "Error while saving habit")
+                  exception.printStackTrace()
+              }
+          }
+
+- Statistic Screen
+   (GET) Query all habits of a user
+   let query = PFQuery(className:"Habit")
+   query.whereKey("userId", equalTo: currentUser)
+   query.order(byDescending: "createdAt")
+   query.findObjectsInBackground { (habits: [PFObject]?, error: Error?) in
+      if let error = error { 
+         print(error.localizedDescription)
+      } else if let habits = habits {
+         print("Successfully retrieved \(habits.count) habits.")
+        // TODO: Do something with habits...
+      }
+   }	
 
