@@ -48,11 +48,9 @@
 - New Habit Screen  
    - Create habit (has a name and schedule for e.g. complete every Wednesday)  
 
-- Register Screen  
+- Login/Register Screen  
+   - Login as an existing user
    - Register as a new User  
-
-- Login Screen  
-   - Login as an existing user  
 
 - Statistics Screen  
    - Show habit history/days complete  
