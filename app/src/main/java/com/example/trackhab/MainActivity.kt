@@ -3,6 +3,8 @@ package com.example.trackhab
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.fragment.app.FragmentManager
+import com.example.trackhab.fragments.StatsFragment
 import com.parse.ParseObject
 import com.parse.GetCallback
 
@@ -15,6 +17,10 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        
+
+        /* TEST CODE */
+        val fragmentManager: FragmentManager = supportFragmentManager
+        fragmentManager.beginTransaction().replace(R.id.flContainer, StatsFragment()).commit()
+
     }
 }
