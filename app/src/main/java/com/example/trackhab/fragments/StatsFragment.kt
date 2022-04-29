@@ -15,6 +15,8 @@ import com.parse.ParseQuery
 
 class StatsFragment : Fragment() {
 
+    var allHabits: MutableList<Habit> = mutableListOf()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,9 +28,6 @@ class StatsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        Log.i("StatsFragment", "User: " + ParseUser.getCurrentUser().objectId)
-
-        // TODO: Remove Below Code
         queryUserHabits()
     }
 
@@ -37,21 +36,17 @@ class StatsFragment : Fragment() {
         val query: ParseQuery<Habit> = ParseQuery.getQuery(Habit::class.java)
 
         // Conditions
-        query.include(Habit.KEY_USER)
-        query.addDescendingOrder("createdAt")
-        query.limit = 20
-
-//        query.whereEqualTo(Habit.KEY_USER, ParseUser.getCurrentUser().objectId)
+        query.whereEqualTo(Habit.KEY_USER, ParseUser.getCurrentUser())
 
         query.findInBackground(object: FindCallback<Habit> {
             override fun done(habits: MutableList<Habit>?, e: ParseException?) {
                 if (e == null) {
-                    if (habits != null) {
-                        for (habit in habits) {
-                            Log.i("StatsFragment", "Habit: " + habit.getHabitName())
-                        }
-                    }
 
+                    Log.i("StatsFragment", "Habit: " + habits.toString())
+
+                    if (habits != null) {
+                        allHabits.addAll(habits)
+                    }
 
                     Log.i("StatsFragment", "Fetching Posts Successful")
                 } else {
