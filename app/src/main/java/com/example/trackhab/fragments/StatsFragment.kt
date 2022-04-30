@@ -70,19 +70,34 @@ class StatsFragment : Fragment() {
 
                         var totalHabits = 0
                         var totalHabitsCompleted = 0
+                        var currentHighestStreak = 0
+                        var daysBetween: Long = 0
 
                         for (habit in habits) {
-                            val daysBetween = daysBetween(Date(), habit.getStartDate())
+                            if (habit.getEndDate() != null) {
+                                if (Date().getTime() < habit.getEndDate()!!.getTime())
+                                    daysBetween = daysBetween(Date(), habit.getStartDate())
+                                else
+                                    daysBetween = daysBetween(habit.getEndDate()!!, habit.getStartDate())
+                            }
 
                             // The number of days since a habit has started is the number of that habits (1 habit a day)
                             totalHabits += daysBetween.toInt()
                             totalHabitsCompleted += habit.getAmountCompleted()?.toInt() ?: 0
+
+                            val highestStreak = habit.getHighestStreak()
+                            if (highestStreak != null) {
+                                if (highestStreak.toInt() > currentHighestStreak) {
+                                    currentHighestStreak = highestStreak.toInt()
+                                }
+                            }
                         }
                         Log.i("StatsFragment", "totalHabits: " + totalHabits.toString())
                         Log.i("StatsFragment", "totalHabitsCompleted: " + totalHabitsCompleted.toString())
 
                         userCompletionRate.text = ( ((totalHabitsCompleted / totalHabits.toDouble()) * 1000).toInt() / 10.0 ).toString() + "%"
                         userTotalHabits.text = totalHabitsCompleted.toString()
+                        userStreak.text = currentHighestStreak.toString()
 
                         allHabits.addAll(habits)
                     }
