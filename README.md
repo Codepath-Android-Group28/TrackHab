@@ -229,3 +229,7 @@
    
    
 <img src="login.gif" width=300>
+   
+### Sprint 2
+<img src="Statistic_Fragment.PNG" width=300>
+
