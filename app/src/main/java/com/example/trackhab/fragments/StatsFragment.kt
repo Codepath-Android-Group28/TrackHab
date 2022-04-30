@@ -22,9 +22,7 @@ class StatsFragment : Fragment() {
 
     lateinit var userCompletionRate: TextView
     lateinit var userStreak: TextView
-    lateinit var userPerfectDays: TextView
     lateinit var userTotalHabits: TextView
-    lateinit var userDailyAverage: TextView
 
     var allHabits: MutableList<Habit> = mutableListOf()
 
@@ -42,9 +40,7 @@ class StatsFragment : Fragment() {
 
         userCompletionRate = view.findViewById(R.id.userCompletionRate)
         userStreak = view.findViewById(R.id.userStreak)
-        userPerfectDays = view.findViewById(R.id.userPerfectDays)
         userTotalHabits = view.findViewById(R.id.userTotalHabits)
-        userDailyAverage = view.findViewById(R.id.userDailyAverage)
 
         queryUserHabits()
     }
