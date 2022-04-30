@@ -11,11 +11,10 @@ import com.parse.GetCallback
 import com.parse.ParseQuery
 
 
-
-
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
+
 }

@@ -72,6 +72,30 @@ class Habit : ParseObject() {
         put(KEY_COMPLETED, completed)
     }
 
+    fun getAmountCompleted(): Number? {
+        return getNumber(KEY_AMOUNT_COMPLETED)
+    }
+
+    fun setAmountCompleted(amountCompleted: Number) {
+        put(KEY_AMOUNT_COMPLETED, amountCompleted)
+    }
+
+    fun getCurrentStreak(): Number? {
+        return getNumber(KEY_CURRENT_STREAK)
+    }
+
+    fun setCurrentStreak(currentStreak: Number) {
+        put(KEY_CURRENT_STREAK, currentStreak)
+    }
+
+    fun getHighestStreak(): Number? {
+        return getNumber(KEY_HIGHEST_STREAK)
+    }
+
+    fun setHighestStreak(highestStreak: Number) {
+        put(KEY_HIGHEST_STREAK, highestStreak)
+    }
+
     fun getWeeklyStatus(): BooleanArray {
         val monday = getBoolean(KEY_MONDAY)
         val tuesday = getBoolean(KEY_TUESDAY)
@@ -102,7 +126,10 @@ class Habit : ParseObject() {
         const val KEY_COUNT = "count"
         const val KEY_TARGET = "target"
         const val KEY_UNIT = "unit"
+        const val KEY_CURRENT_STREAK = "currentStreak"
+        const val KEY_HIGHEST_STREAK = "highestStreak"
         const val KEY_COMPLETED = "completed"
+        const val KEY_AMOUNT_COMPLETED = "amountCompleted"
         const val KEY_MONDAY = "monday"
         const val KEY_TUESDAY = "tuesday"
         const val KEY_WEDNESDAY = "wednesday"
