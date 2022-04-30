@@ -37,17 +37,6 @@
         app:layout_constraintTop_toBottomOf="@+id/userCompletionRate" />
 
     <TextView
-        android:id="@+id/perfectDaysTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Perfect Days"
-        android:layout_marginTop="150dp"
-        android:layout_marginRight="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/completionRateTitle"
-        app:layout_constraintTop_toBottomOf="@+id/userCompletionRate" />
-
-    <TextView
         android:id="@+id/userStreak"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -58,55 +47,24 @@
         app:layout_constraintTop_toBottomOf="@+id/streakTitle" />
 
     <TextView
-        android:id="@+id/userPerfectDays"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="7"
-        android:layout_marginRight="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/completionRateTitle"
-        app:layout_constraintTop_toBottomOf="@+id/perfectDaysTitle" />
-
-    <TextView
         android:id="@+id/totalHabitsTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Total Habits Done"
-        android:layout_marginLeft="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/completionRateTitle"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userStreak" />
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/completionRateTitle"
+        app:layout_constraintTop_toBottomOf="@+id/userCompletionRate" />
 
     <TextView
         android:id="@+id/userTotalHabits"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="10"
-        android:layout_marginLeft="50dp"
-        app:layout_constraintEnd_toStartOf="@+id/completionRateTitle"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginRight="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/completionRateTitle"
         app:layout_constraintTop_toBottomOf="@+id/totalHabitsTitle" />
-
-    <TextView
-        android:id="@+id/dailyAverageTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Daily Average"
-        android:layout_marginRight="50dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/completionRateTitle"
-        app:layout_constraintTop_toBottomOf="@+id/userPerfectDays" />
-
-    <TextView
-        android:id="@+id/userDailyAverage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="1.5"
-        android:layout_marginRight="50dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/completionRateTitle"
-        app:layout_constraintTop_toBottomOf="@+id/dailyAverageTitle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
