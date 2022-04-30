@@ -38,7 +38,7 @@ class StatsFragment : Fragment() {
         query.findInBackground(object: FindCallback<Habit> {
             override fun done(objects: MutableList<Habit>?, e: ParseException?) {
                 if (e == null) {
-                    // TODO: Successful query
+
 
                 } else {
                     Log.e("StatsFragment", "Error fetching posts")

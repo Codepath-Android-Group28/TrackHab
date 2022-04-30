@@ -39,6 +39,7 @@ class HomeFragment : Fragment() {
 //        Setup logics
 
         postRecyclerView = view.findViewById(R.id.postRecyclerView)
+
         adapter= Adapter(requireContext(), allHabits)
         postRecyclerView.adapter = adapter
         postRecyclerView.layoutManager=LinearLayoutManager(requireContext())
@@ -61,6 +62,7 @@ class HomeFragment : Fragment() {
                     Log.e("StatsFragment", "Error fetching posts: " + e.message)
                 }
                 else{
+                    Log.i("StatsFragment", "Fetching Posts Start"+habits)
                     if (habits != null) {
                         for (habit in habits) {
                             Log.i(
