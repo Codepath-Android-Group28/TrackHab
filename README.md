@@ -225,7 +225,7 @@
 ```
 
 ### Sprint 1
-<img src="signup.gif" width=600>
+<img src="signup.gif" width=300>
    
    
-<img src="login.gif" width=600>
+<img src="login.gif" width=300>
