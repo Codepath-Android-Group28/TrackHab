@@ -81,6 +81,9 @@ class StatsFragment : Fragment() {
                         Log.i("StatsFragment", "totalHabits: " + totalHabits.toString())
                         Log.i("StatsFragment", "totalHabitsCompleted: " + totalHabitsCompleted.toString())
 
+                        userCompletionRate.text = ( ((totalHabitsCompleted / totalHabits.toDouble()) * 1000).toInt() / 10.0 ).toString() + "%"
+                        userTotalHabits.text = totalHabitsCompleted.toString()
+
                         allHabits.addAll(habits)
                     }
 
