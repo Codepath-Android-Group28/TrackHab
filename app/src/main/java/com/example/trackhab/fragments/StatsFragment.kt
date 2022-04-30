@@ -56,12 +56,6 @@ class StatsFragment : Fragment() {
             override fun done(habits: MutableList<Habit>?, e: ParseException?) {
                 if (e == null) {
 
-//                    val dateStr = "04/27/2022"
-//                    val sdf = SimpleDateFormat("MM/dd/yyyy")
-//                    val date = sdf.parse(dateStr)
-//
-//                    Log.i("StatsFragment", "days between: " + daysBetween(Date(), date))
-
                     if (habits != null) {
 
                         var totalHabits = 0
