@@ -26,9 +26,9 @@
 **Required Must-have Stories**
 
 [ ] Create habit (has a name and schedule for e.g. complete every Wednesday)  
-[ ] Mark that a habit was completed for the day  
+[x] Mark that a habit was completed for the day  
 [ ] Show habit history/days complete  
-[ ] Show what habits you have to do today  
+[x] Show what habits you have to do today  
 [x] Register as a new user  
 [x] Login as Existing User  
 
@@ -232,4 +232,10 @@
    
 ### Sprint 2
 <img src="Statistic_Fragment.PNG" width=300>
+
+<img src="displayHabits.gif" width=300>
+
+<img src="switchBetweenTabs.gif" width=300>
+
+
 
