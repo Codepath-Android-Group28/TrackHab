@@ -41,7 +41,7 @@
         android:id="@+id/streakTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hightest Streak"
+        android:text="Highest Streak"
         android:layout_marginLeft="80dp"
         android:layout_marginTop="120dp"
         android:textSize="20sp"
